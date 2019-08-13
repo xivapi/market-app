@@ -25,6 +25,10 @@ class XIVAPI
         this.request(`/companion/characters?token=${token.token}&region=eu`, callback);
     }
 
+    getGameServers(callback) {
+        this.request('/servers/dc', callback);
+    }
+
     request(endpoint, callback) {
         // Stone II
         fetch(`https://xivapi.com${endpoint}`, { mode: 'cors' })

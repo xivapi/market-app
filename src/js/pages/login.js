@@ -26,7 +26,9 @@ export default function Login()
         if (token === null) {
             var storedToken = Storage.fetch('character_1');
 
-            if (typeof storedToken !== 'undefined') {
+            console.log(storedToken);
+
+            if (storedToken !== null) {
                 setToken(storedToken.token);
             }
         }
