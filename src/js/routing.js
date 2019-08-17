@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import React from "react";
 
 import Home from "./pages/home";
-import Servers from "./servers/servers";
+import Account from "./account/account";
 
 export default function Routing()
 {
@@ -16,15 +16,18 @@ export default function Routing()
                                 <li className="nav-item">
                                     <Link to="/" className="nav-link">Home</Link>
                                 </li>
+                            </ul>
+
+                            <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link to="/servers" className="nav-link">Servers</Link>
+                                    <Link to="/account" className="nav-link">Account</Link>
                                 </li>
                             </ul>
                         </div>
                     </nav>
 
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/servers" component={Servers} />
+                    <Route exact path="/account" component={Account} />
                 </Router>
             </div>
         </div>
